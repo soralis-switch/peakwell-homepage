@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ピークウェル株式会社 | デジタルで未来を拓くパートナー</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero">
+        <img src="assets/images/logo-peakwell.svg" alt="ピークウェル株式会社ロゴ" class="brand__logo" />
+        <span class="u-sr-only">ピークウェル株式会社</span>
+      </a>
+      <nav class="site-nav" aria-label="メインナビゲーション">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <ul class="site-nav__list" id="primary-menu">
+          <li><a href="#services">サービス</a></li>
+          <li><a href="#about">私たちについて</a></li>
+          <li><a href="#works">導入事例</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="hero__eyebrow">デジタルイノベーションで課題解決</p>
+          <h1 class="hero__title">ビジネスを加速させる<br />デジタルパートナー</h1>
+          <p class="hero__description">
+            ピークウェルは戦略立案から開発・運用までワンストップで支援。<br class="u-hidden-sm" />
+            豊富な経験を持つ専門チームが、貴社の成長に寄り添います。
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">無料相談を予約</a>
+            <a class="btn btn--ghost" href="#services">サービスを見る</a>
+          </div>
+        </div>
+        <figure class="hero__illustration" aria-hidden="true">
+          <img src="assets/images/hero-illustration.svg" alt="" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>サービス</h2>
+          <p>戦略設計から運用まで一貫してサポートします。</p>
+        </div>
+        <div class="services__grid">
+          <article class="service-card">
+            <img src="assets/images/service-strategy.svg" alt="戦略立案のイラスト" class="service-card__icon" />
+            <h3>デジタル戦略コンサルティング</h3>
+            <p>
+              市場分析からロードマップ策定まで、成果につながる戦略立案を支援します。
+            </p>
+          </article>
+          <article class="service-card">
+            <img src="assets/images/service-dev.svg" alt="開発チームのイラスト" class="service-card__icon" />
+            <h3>システム・アプリ開発</h3>
+            <p>
+              モダンな技術スタックで迅速に開発。ユーザーに寄り添うUXを実現します。
+            </p>
+          </article>
+          <article class="service-card">
+            <img src="assets/images/service-growth.svg" alt="成長のイラスト" class="service-card__icon" />
+            <h3>運用改善・グロース支援</h3>
+            <p>
+              運用フェーズを継続的に伴走し、KPI達成へ向けた改善サイクルを回します。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about__grid">
+        <div class="about__illustration" aria-hidden="true">
+          <img src="assets/images/about-team.svg" alt="" />
+        </div>
+        <div class="about__content">
+          <div class="section-header section-header--left">
+            <h2>私たちについて</h2>
+            <p>テクノロジーとデザインの力で、企業の可能性を最大化します。</p>
+          </div>
+          <ul class="about__list">
+            <li>
+              <h3>専門家チーム</h3>
+              <p>エンジニア、デザイナー、マーケターが連携し、課題解決に向けた最適なチームを編成します。</p>
+            </li>
+            <li>
+              <h3>パートナーシップ重視</h3>
+              <p>単なる委託関係ではなく、長期的なパートナーとして伴走することを大切にしています。</p>
+            </li>
+            <li>
+              <h3>成果へのこだわり</h3>
+              <p>定量・定性的な成果指標を設定し、プロジェクトの成功を数値で証明します。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="works" id="works">
+      <div class="container">
+        <div class="section-header">
+          <h2>導入事例</h2>
+          <p>成果につながった最新のプロジェクトを一部ご紹介します。</p>
+        </div>
+        <div class="works__grid">
+          <article class="work-card">
+            <div class="work-card__image" aria-hidden="true">
+              <img src="assets/images/case-analytics.svg" alt="" />
+            </div>
+            <div class="work-card__body">
+              <h3>大手小売企業のDX推進</h3>
+              <p>店舗データを統合し、需要予測の精度を40%向上。意思決定の迅速化を実現しました。</p>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-card__image" aria-hidden="true">
+              <img src="assets/images/case-app.svg" alt="" />
+            </div>
+            <div class="work-card__body">
+              <h3>金融機関向けモバイルアプリ</h3>
+              <p>UI/UXの全面刷新とセキュリティ強化で、顧客満足度を大幅に改善しました。</p>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-card__image" aria-hidden="true">
+              <img src="assets/images/case-automation.svg" alt="" />
+            </div>
+            <div class="work-card__body">
+              <h3>製造業の業務自動化</h3>
+              <p>RPA導入により、日常業務の60%を自動化。人的リソースを戦略領域へ再配置しました。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__content">
+          <div class="section-header section-header--left">
+            <h2>お問い合わせ</h2>
+            <p>ご相談・ご質問はフォームまたはお電話でお気軽にご連絡ください。</p>
+          </div>
+          <div class="contact__info">
+            <p><strong>電話:</strong> 03-1234-5678</p>
+            <p><strong>メール:</strong> contact@peakwell.co.jp</p>
+            <p><strong>所在地:</strong> 東京都渋谷区○○ 1-2-3 ピークウェルビル 7F</p>
+          </div>
+        </div>
+        <form class="contact-form" aria-label="お問い合わせフォーム">
+          <label class="contact-form__field">
+            <span>お名前</span>
+            <input type="text" name="name" placeholder="山田 太郎" required />
+          </label>
+          <label class="contact-form__field">
+            <span>メールアドレス</span>
+            <input type="email" name="email" placeholder="example@company.jp" required />
+          </label>
+          <label class="contact-form__field">
+            <span>ご相談内容</span>
+            <textarea name="message" rows="4" placeholder="ご要望や現状の課題をご入力ください" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary contact-form__submit">送信する</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="brand brand--footer" href="#hero">
+        <img src="assets/images/logo-peakwell.svg" alt="ピークウェル株式会社ロゴ" class="brand__logo" />
+        <span class="u-sr-only">ピークウェル株式会社</span>
+      </a>
+      <p class="site-footer__copy">&copy; <span id="js-year"></span> Peakwell Inc. All rights reserved.</p>
+      <ul class="site-footer__links">
+        <li><a href="#">プライバシーポリシー</a></li>
+        <li><a href="#">利用規約</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.site-nav__list');
+
+    navToggle?.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navList?.classList.toggle('is-open');
+    });
+
+    const year = document.getElementById('js-year');
+    if (year) {
+      year.textContent = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>
