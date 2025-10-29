@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要 | 株式会社ピークウェル</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animations.css">
+    <style>
+        body { font-family: 'BIZ UDPGothic', sans-serif; color: #333; }
+        h1, h2, h3, h4 { font-weight: 700; }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'peakwell-blue': '#00bfff',
+                        'peakwell-darkblue': '#009acd',
+                        'light-gray': '#f7fafc',
+                        'light-blue': '#f0f9ff',
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- ヘッダー -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center"><img src="assets/images/logo.png" alt="PEAKWELL Logo" class="h-10"></a>
+            <nav class="hidden md:flex space-x-6 items-center text-sm">
+                <a href="business.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">事業内容</a>
+                <a href="quality.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">品質管理</a>
+                <a href="company.html" class="text-peakwell-blue font-bold">会社概要</a>
+                <a href="message.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">代表者挨拶</a>
+                <a href="news.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">ニュース</a>
+                <a href="recruit.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">採用情報</a>
+
+                <a href="index.html#contact" class="bg-peakwell-blue text-white font-bold py-2 px-6 rounded-full hover:bg-peakwell-darkblue transition duration-300">お問い合わせ</a>
+                </nav>
+            <div class="md:hidden"><button class="text-gray-600 focus:outline-none"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- パンくずリスト -->
+        <div class="bg-light-blue"><div class="container mx-auto px-6 py-2 text-sm text-gray-500"><a href="index.html" class="hover:text-peakwell-blue">ホーム</a><span class="mx-2">></span><span>会社概要</span></div></div>
+        
+        <!-- ページヘッダー -->
+        <section class="relative bg-gradient-to-br from-blue-50 via-white to-cyan-50 pt-20 pb-32 overflow-hidden">
+            <!-- 背景装飾 -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-peakwell-blue opacity-5 rounded-full blur-3xl animate-float"></div>
+                <div class="absolute bottom-0 left-0 w-80 h-80 bg-cyan-400 opacity-5 rounded-full blur-3xl animate-float-delayed"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center fade-in-up">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">COMPANY</h1>
+                    <p class="text-peakwell-blue text-xl font-bold mb-6">会社概要</p>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+                        循環型医療流通の実現を目指して。<br>
+                        私たちの理念と歩み。
+                    </p>
+                </div>
+                
+                <!-- 会社ビルイラスト -->
+                <div class="mt-12 fade-in-up stagger-2">
+                    <img src="assets/images/company-building.jpg" alt="ピークウェル本社" class="rounded-2xl shadow-2xl mx-auto max-w-4xl w-full hover-lift">
+                </div>
+            </div>
+        </section>
+
+        <!-- ミッション・ビジョン・バリュー -->
+        <section id="philosophy" class="py-20 bg-white relative overflow-hidden">
+            <!-- 背景装飾 -->
+            <div class="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-10 animate-float"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-100 rounded-full blur-3xl opacity-10 animate-float-delayed"></div>
+            
+            <div class="container mx-auto px-6 max-w-6xl relative z-10">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">企業理念</h2>
+                    <p class="text-gray-600 text-lg">私たちが大切にする想いと、めざす未来。</p>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="mvv-card mission-card mb-12 fade-in-up">
+                    <div class="mvv-card__image">
+                        <img src="assets/images/mvv-mission.jpg" alt="Mission" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mvv-card__content">
+                        <div class="mvv-card__badge">Mission</div>
+                        <h3 class="mvv-card__title">医療を、もっと<span class="text-peakwell-blue">つながる・めぐる・つづく</span>ものに。</h3>
+                        <p class="mvv-card__description">
+                            医薬品が必要な人に届く。余った資源が再び活きる。その循環が、医療現場を支え、未来をつなぐ。
+                            私たちは、医療資源の流通にイノベーションを起こし、持続可能な医療インフラを構築します。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="mvv-card vision-card mb-12 fade-in-up stagger-1">
+                    <div class="mvv-card__content">
+                        <div class="mvv-card__badge">Vision</div>
+                        <h3 class="mvv-card__title">いらなくなった<span class="text-peakwell-blue">"もの"</span>が、また誰かの<span class="text-peakwell-blue">"助け"</span>になる。</h3>
+                        <p class="mvv-card__description">
+                            医療資源がムダなく循環し、必要な人にちゃんと届く社会をつくる。私たちは、そのインフラになる。
+                            循環型医療流通のプラットフォームとして、業界全体の最適化を実現します。
+                        </p>
+                    </div>
+                    <div class="mvv-card__image">
+                        <img src="assets/images/mvv-vision.jpg" alt="Vision" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Values Section -->
+                <div class="mt-16 fade-in-up stagger-2">
+                    <h3 class="text-center text-3xl font-bold text-gray-800 mb-3">Our Values</h3>
+                    <p class="text-center text-gray-600 mb-10">私たちが大切にする5つの価値観</p>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                        <!-- Value 1: サステナブル・スピリット -->
+                        <div class="value-card">
+                            <div class="mb-4">
+                                <img src="assets/images/value-sustainable.jpg" alt="サステナブル・スピリット" class="w-full h-48 object-cover rounded-xl">
+                            </div>
+                            <div class="value-card__icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                                </svg>
+                            </div>
+                            <h4 class="value-card__title">サステナブル・スピリット</h4>
+                            <p class="value-card__description">もったいないをなくして、未来の医療につなげる。</p>
+                        </div>
+
+                        <!-- Value 2: ユーザーファースト -->
+                        <div class="value-card">
+                            <div class="mb-4">
+                                <img src="assets/images/value-user-first.jpg" alt="ユーザーファースト" class="w-full h-48 object-cover rounded-xl">
+                            </div>
+                            <div class="value-card__icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+                                <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h4 class="value-card__title">ユーザーファーストでいこう</h4>
+                            <p class="value-card__description">目の前の現場に本気で向き合い、想像以上のサービスを届ける。</p>
+                        </div>
+
+                        <!-- Value 3: 誇りと信頼 -->
+                        <div class="value-card">
+                            <div class="mb-4">
+                                <img src="assets/images/value-trust.jpg" alt="誇りと信頼" class="w-full h-48 object-cover rounded-xl">
+                            </div>
+                            <div class="value-card__icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">
+                                <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h4 class="value-card__title">誇れるから、すすめられる</h4>
+                            <p class="value-card__description">誇りを持って紹介できる信頼を、積み重ねる。</p>
+                        </div>
+
+                        <!-- Value 4: 安全とコンプライアンス -->
+                        <div class="value-card">
+                            <div class="mb-4">
+                                <img src="assets/images/value-compliance.jpg" alt="安全とコンプライアンス" class="w-full h-48 object-cover rounded-xl">
+                            </div>
+                            <div class="value-card__icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                                <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h4 class="value-card__title">Safety & Compliance First</h4>
+                            <p class="value-card__description">患者安全と法令遵守を最優先に。GDP/GSP・薬機法・データ保護を守り、迷ったら止める。</p>
+                        </div>
+
+                        <!-- Value 5: スピーディ・フェア・トレーサブル -->
+                        <div class="value-card md:col-span-2 lg:col-span-1">
+                            <div class="mb-4">
+                                <img src="assets/images/value-speed.jpg" alt="スピーディ・フェア・トレーサブル" class="w-full h-48 object-cover rounded-xl">
+                            </div>
+                            <div class="value-card__icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                                <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h4 class="value-card__title">Fast, Fair & Traceable</h4>
+                            <p class="value-card__description">速く、公正で、追跡できる取引を標準化。SLA・フェアプライス・ロット/温度/期限の完全追跡。</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 会社概要 -->
+        <section id="overview" class="py-20 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-200 rounded-full blur-3xl opacity-10 animate-float"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">会社概要</h2>
+                    <p class="text-gray-600 text-lg">Company Overview</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl border-2 border-blue-100 p-10 fade-in-up stagger-1">
+                    <table class="w-full text-left">
+                        <tbody>
+                            <tr class="border-b border-gray-200 transition-colors hover:bg-blue-50">
+                                <th class="py-5 px-4 font-bold text-gray-700 w-1/3 align-top">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-peakwell-blue" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/>
+                                        </svg>
+                                        会社名
+                                    </div>
+                                </th>
+                                <td class="py-5 px-4 text-gray-600 font-medium">株式会社ピークウェル<br><span class="text-sm text-gray-500">PEAKWELL Inc.</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200 transition-colors hover:bg-blue-50">
+                                <th class="py-5 px-4 font-bold text-gray-700 align-top">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-peakwell-blue" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        所在地
+                                    </div>
+                                </th>
+                                <td class="py-5 px-4 text-gray-600">〒171-0014<br>東京都豊島区池袋2丁目43-1</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 transition-colors hover:bg-blue-50">
+                                <th class="py-5 px-4 font-bold text-gray-700 align-top">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-peakwell-blue" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                        </svg>
+                                        設立
+                                    </div>
+                                </th>
+                                <td class="py-5 px-4 text-gray-600">2013年11月</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 transition-colors hover:bg-blue-50">
+                                <th class="py-5 px-4 font-bold text-gray-700 align-top">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-peakwell-blue" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                                        </svg>
+                                        代表者
+                                    </div>
+                                </th>
+                                <td class="py-5 px-4"><a href="message.html" class="text-peakwell-blue hover:text-peakwell-darkblue font-medium hover:underline transition-colors">代表取締役　黒宮 健</a></td>
+                            </tr>
+                            <tr class="border-b border-gray-200 transition-colors hover:bg-blue-50">
+                                <th class="py-5 px-4 font-bold text-gray-700 align-top">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-peakwell-blue" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                        </svg>
+                                        資本金
+                                    </div>
+                                </th>
+                                <td class="py-5 px-4 text-gray-600">非公開</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 transition-colors hover:bg-blue-50">
+                                <th class="py-5 px-4 font-bold text-gray-700 align-top">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-peakwell-blue" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        拠点
+                                    </div>
+                                </th>
+                                <td class="py-5 px-4 text-gray-600">
+                                    <div class="mb-3">
+                                        <p class="font-semibold text-gray-700 mb-1">大阪営業所</p>
+                                        <p class="text-sm">大阪府大阪市此花区桜島３－４－２４<br>三菱倉庫株式会社 大阪支店 桜島第二営業所<br>３号配送センター内</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200 transition-colors hover:bg-blue-50">
+                                <th class="py-5 px-4 font-bold text-gray-700 align-top">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-peakwell-blue" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                                        </svg>
+                                        事業内容
+                                    </div>
+                                </th>
+                                <td class="py-5 px-4 text-gray-600">
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-peakwell-blue mt-1">●</span>
+                                            <span>医療用医薬品買取事業</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-peakwell-blue mt-1">●</span>
+                                            <span>OTC医薬品販売事業</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-peakwell-blue mt-1">●</span>
+                                            <span>医療機器買取・再販事業</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-peakwell-blue mt-1">●</span>
+                                            <span>医療向けフルフィルメントサービス事業</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="transition-colors hover:bg-blue-50">
+                                <th class="py-5 px-4 font-bold text-gray-700 align-top">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-peakwell-blue" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        許可・届出
+                                    </div>
+                                </th>
+                                <td class="py-5 px-4 text-gray-600">
+                                    <div class="space-y-3">
+                                        <div>
+                                            <p class="font-semibold text-gray-700">医薬品医療機器等法　許可・届出の一覧</p>
+                                        </div>
+                                        <ul class="space-y-2 ml-4">
+                                            <li class="flex items-start gap-2">
+                                                <span class="text-peakwell-blue mt-1">●</span>
+                                                <span>医薬品販売業許可証　許可番号：第14801号</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="text-peakwell-blue mt-1">●</span>
+                                                <span>高度医療機器販売業</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="text-peakwell-blue mt-1">●</span>
+                                                <span>古物商</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- アクセス -->
+        <section id="access" class="py-20 bg-white relative overflow-hidden">
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-10 animate-float-delayed"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">アクセス</h2>
+                    <p class="text-gray-600 text-lg">Access</p>
+                </div>
+                <div class="max-w-4xl mx-auto fade-in-up stagger-1">
+                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-blue-100">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.9926476870377!2d139.70748851526066!3d35.73144998018796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5de6e1c1a1%3A0x4c8b2b7c9f4e4a73!2z5p2x5Lqs6YO95Yaw5bO25Yy65rGg6KKL77yS5LiB55uu77yU77yT4oiS77yR!5e0!3m2!1sja!2sjp!4v1698765432100!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="p-8 bg-gradient-to-br from-white to-blue-50">
+                            <div class="flex items-start gap-4 mb-6">
+                                <div class="w-12 h-12 bg-peakwell-blue rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-bold text-gray-800 mb-2">〒171-0014</p>
+                                    <p class="text-gray-700 font-medium">東京都豊島区池袋2丁目43-1</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-peakwell-blue" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                                        <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">公共交通機関でのアクセス</p>
+                                    <p class="text-gray-600 mt-1">JR各線・東京メトロ・西武線・東武東上線「池袋駅」より徒歩約8分</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div><h4 class="font-bold mb-4">事業内容</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="business.html" class="hover:text-peakwell-blue">事業一覧</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">品質管理</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="quality.html" class="hover:text-peakwell-blue">品質管理への取り組み</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">会社情報</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="company.html" class="hover:text-peakwell-blue">会社概要</a></li><li><a href="message.html" class="hover:text-peakwell-blue">代表者挨拶</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">ニュース</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="news.html" class="hover:text-peakwell-blue">ニュース一覧</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">採用情報</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="recruit.html" class="hover:text-peakwell-blue">採用情報</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">お問い合わせ</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="index.html#contact" class="hover:text-peakwell-blue">お問い合わせフォーム</a></li></ul></div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <a href="index.html" class="flex items-center mb-4 md:mb-0"><img src="assets/images/logo.png" alt="PEAKWELL Logo" class="h-8 mr-3"><span class="text-xl font-bold">株式会社ピークウェル</span></a>
+                <p class="text-gray-400 text-sm">© 2024 PEAKWELL Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="animations.js"></script>
+</body>
+</html>

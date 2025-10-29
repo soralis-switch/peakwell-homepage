@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>採用情報 | 株式会社ピークウェル</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animations.css">
+    <style>
+        body { font-family: 'BIZ UDPGothic', sans-serif; color: #333; }
+        h1, h2, h3 { font-weight: 700; }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'peakwell-blue': '#00bfff',
+                        'peakwell-darkblue': '#009acd',
+                        'light-gray': '#f7fafc',
+                        'light-blue': '#f0f9ff',
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- ヘッダー -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center"><img src="assets/images/logo.png" alt="PEAKWELL Logo" class="h-10"></a>
+            <nav class="hidden md:flex space-x-6 items-center text-sm">
+                <a href="business.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">事業内容</a>
+                <a href="company.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">会社概要</a>
+                <a href="message.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">代表者挨拶</a>
+                <a href="news.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">ニュース</a>
+                <a href="recruit.html" class="text-peakwell-blue font-bold">採用情報</a>
+                <a href="index.html#contact" class="bg-peakwell-blue text-white font-bold py-2 px-6 rounded-full hover:bg-peakwell-darkblue transition duration-300">お問い合わせ</a>
+                </nav>
+            <div class="md:hidden"><button class="text-gray-600 focus:outline-none"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- パンくずリスト -->
+        <div class="bg-light-blue"><div class="container mx-auto px-6 py-2 text-sm text-gray-500"><a href="index.html" class="hover:text-peakwell-blue">ホーム</a><span class="mx-2">></span><span>採用情報</span></div></div>
+        
+        <!-- ページヘッダー -->
+        <section class="relative bg-gradient-to-br from-blue-50 via-white to-cyan-50 pt-20 pb-32 overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-peakwell-blue opacity-5 rounded-full blur-3xl animate-float"></div>
+                <div class="absolute bottom-0 left-0 w-80 h-80 bg-cyan-400 opacity-5 rounded-full blur-3xl animate-float-delayed"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center fade-in-up">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">RECRUIT</h1>
+                    <p class="text-peakwell-blue text-xl font-bold mb-6">採用情報</p>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+                        未来の医療を、共に創る仲間を募集しています。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 採用メッセージ -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                    <div class="fade-in-up">
+                        <h2 class="text-4xl font-bold text-gray-800 mb-6">未来の医療を、<br>共に創る仲間を募集しています。</h2>
+                        <p class="text-gray-700 leading-relaxed text-lg mb-6">
+                            ピークウェルは、まだ誰も見たことのないスマートな医療流通ネットワークを本気で実現しようとしています。
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            巨大でレガシーな業界に、テクノロジーで変革を起こす。この挑戦に、情熱を燃やせる仲間を求めています。
+                        </p>
+                    </div>
+                    <div class="fade-in-up stagger-1">
+                        <img src="assets/images/recruit-team.jpg" alt="チームで協力するイラスト" class="w-full rounded-2xl shadow-xl hover-lift">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 募集要項 -->
+        <section class="py-20 bg-light-blue">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">募集中の職種</h2>
+                <div class="space-y-8">
+
+                    <!-- 募集職種 (物流オペレーション・コンサルタント) -->
+                    <div class="recruit-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 fade-in-up">
+                        <h3 class="text-2xl font-bold text-peakwell-blue">物流オペレーション・コンサルタント</h3>
+                        <p class="mt-4 text-gray-600">大手製薬会社や大規模医療法人に対し、データと対話で課題を解決し、事業成果の最大化を支援するカスタマーサクセス業務です。</p>
+                        <div class="mt-6 border-t pt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div><strong class="text-gray-700">勤務地:</strong> 東京本社 / 大阪支社</div>
+                            <div><strong class="text-gray-700">雇用形態:</strong> 正社員</div>
+                            <div><strong class="text-gray-700">給与:</strong> 年俸 500万円～800万円</div>
+                        </div>
+                        <div class="mt-6 text-right">
+                            <a href="recruit-consultant.html" class="bg-gray-500 text-white font-bold py-2 px-6 rounded-full hover:bg-gray-600 transition duration-300">詳細を見る</a>
+                        </div>
+                    </div>
+
+                    <!-- 募集職種 (物流倉庫管理者) -->
+                    <div class="recruit-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 fade-in-up stagger-1">
+                        <h3 class="text-2xl font-bold text-peakwell-blue">物流倉庫管理者</h3>
+                        <p class="mt-4 text-gray-600">医薬品専門倉庫の運営管理、スタッフマネジメント、品質・安全管理など、倉庫業務全般の責任者としてご活躍いただきます。</p>
+                        <div class="mt-6 border-t pt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div><strong class="text-gray-700">勤務地:</strong> 大阪物流センター</div>
+                            <div><strong class="text-gray-700">雇用形態:</strong> 正社員</div>
+                            <div><strong class="text-gray-700">給与:</strong> 年俸 400万円～500万円</div>
+                        </div>
+                        <div class="mt-6 text-right">
+                            <a href="#" class="bg-peakwell-blue text-white font-bold py-2 px-6 rounded-full hover:bg-peakwell-darkblue transition duration-300">応募する</a>
+                        </div>
+                    </div>
+
+                    <!-- 募集職種 (倉庫作業スタッフ) -->
+                    <div class="recruit-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 fade-in-up stagger-2">
+                        <h3 class="text-2xl font-bold text-peakwell-blue">倉庫作業スタッフ (アルバイト)</h3>
+                        <p class="mt-4 text-gray-600">医薬品のピッキング、検品、梱包などの軽作業をお任せします。丁寧な研修があるので、未経験の方も安心してスタートできます。</p>
+                        <div class="mt-6 border-t pt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div><strong class="text-gray-700">勤務地:</strong> 大阪物流センター</div>
+                            <div><strong class="text-gray-700">雇用形態:</strong> アルバイト</div>
+                            <div><strong class="text-gray-700">給与:</strong> 時給 1,300円～</div>
+                        </div>
+                        <div class="mt-6 text-right">
+                            <a href="#" class="bg-gray-500 text-white font-bold py-2 px-6 rounded-full hover:bg-gray-600 transition duration-300">詳細を見る</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div><h4 class="font-bold mb-4">事業内容</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="business.html" class="hover:text-peakwell-blue">事業一覧</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">会社情報</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="company.html" class="hover:text-peakwell-blue">会社概要</a></li><li><a href="message.html" class="hover:text-peakwell-blue">代表者挨拶</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">ニュース</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="news.html" class="hover:text-peakwell-blue">ニュース一覧</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">採用情報</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="recruit.html" class="hover:text-peakwell-blue">採用情報</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">お問い合わせ</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="index.html#contact" class="hover:text-peakwell-blue">お問い合わせフォーム</a></li></ul></div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <a href="index.html" class="flex items-center mb-4 md:mb-0"><img src="assets/images/logo.png" alt="PEAKWELL Logo" class="h-8 mr-3"><span class="text-xl font-bold">株式会社ピークウェル</span></a>
+                <p class="text-gray-400 text-sm">© 2024 PEAKWELL Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="animations.js"></script>
+</body>
+</html>

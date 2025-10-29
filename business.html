@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事業内容 | 株式会社ピークウェル</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animations.css">
+    <style>
+        body { font-family: 'BIZ UDPGothic', sans-serif; color: #333; }
+        h1, h2, h3, h4 { font-weight: 700; }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'peakwell-blue': '#00bfff',
+                        'peakwell-darkblue': '#009acd',
+                        'light-gray': '#f7fafc',
+                        'light-blue': '#f0f9ff',
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- ヘッダー -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center"><img src="assets/images/logo.png" alt="PEAKWELL Logo" class="h-10"></a>
+            <nav class="hidden md:flex space-x-6 items-center text-sm">
+                <a href="business.html" class="text-peakwell-blue font-bold">事業内容</a>
+                <a href="quality.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">品質管理</a>
+                <a href="company.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">会社概要</a>
+                <a href="message.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">代表者挨拶</a>
+                <a href="news.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">ニュース</a>
+                <a href="recruit.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">採用情報</a>
+                <a href="index.html#contact" class="bg-peakwell-blue text-white font-bold py-2 px-6 rounded-full hover:bg-peakwell-darkblue transition duration-300">お問い合わせ</a>
+                </nav>
+            <div class="md:hidden"><button class="text-gray-600 focus:outline-none"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- パンくずリスト -->
+        <div class="bg-light-blue"><div class="container mx-auto px-6 py-2 text-sm text-gray-500"><a href="index.html" class="hover:text-peakwell-blue">ホーム</a><span class="mx-2">></span><span>事業内容</span></div></div>
+        
+        <!-- ページヘッダー -->
+        <section class="relative bg-gradient-to-br from-blue-50 via-white to-cyan-50 pt-20 pb-32 overflow-hidden">
+            <!-- 背景装飾 -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-peakwell-blue opacity-5 rounded-full blur-3xl animate-float"></div>
+                <div class="absolute bottom-0 left-0 w-80 h-80 bg-cyan-400 opacity-5 rounded-full blur-3xl animate-float-delayed"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center fade-in-up">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">BUSINESS</h1>
+                    <p class="text-peakwell-blue text-xl font-bold mb-6">事業内容</p>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+                        医療流通に革新をもたらす、4つのコア事業。<br>
+                        循環型医療社会の実現を目指して。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 事業1: 医薬品買取事業 -->
+        <section class="py-20 bg-white relative overflow-hidden">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="business-card grid md:grid-cols-2 gap-12 items-center fade-in-up">
+                    <div class="business-card__image order-2 md:order-1">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl transform rotate-3 opacity-10"></div>
+                            <img src="assets/images/medicine-buyback.jpg" alt="医薬品買取事業" class="relative rounded-2xl shadow-xl hover-scale">
+                        </div>
+                    </div>
+                    <div class="business-card__content order-1 md:order-2">
+                        <div class="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full mb-6">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="font-bold text-sm">BUSINESS 01</span>
+                        </div>
+                        <h2 class="text-4xl font-bold text-gray-800 mb-6">医薬品買取事業</h2>
+                        <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                            薬局経営における課題の一つである「不動在庫」。使用期限が迫る医薬品を廃棄することなく、価値ある医療資源として再活用する道を開きます。
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">独自の査定システムによる適正価格での買取</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">薬局のキャッシュフロー改善に貢献</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">サステナブルな医療資源の循環を実現</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 事業2: OTC販売事業 -->
+        <section class="py-20 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="business-card grid md:grid-cols-2 gap-12 items-center fade-in-up stagger-1">
+                    <div class="business-card__content">
+                        <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                            </svg>
+                            <span class="font-bold text-sm">BUSINESS 02</span>
+                        </div>
+                        <h2 class="text-4xl font-bold text-gray-800 mb-6">OTC医薬品販売事業</h2>
+                        <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                            一般用医薬品（OTC）のオンライン販売プラットフォームを展開。薬剤師による丁寧なオンライン相談と、迅速な配送サービスで、お客様の健康をサポートします。
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">薬剤師によるオンライン健康相談サービス</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">豊富な品揃えと競争力のある価格設定</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">最短翌日配送で迅速にお届け</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business-card__image">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl transform -rotate-3 opacity-10"></div>
+                            <img src="assets/images/otc-sales.jpg" alt="OTC医薬品販売事業" class="relative rounded-2xl shadow-xl hover-scale">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 事業3: 医療機器買取・再販事業 -->
+        <section class="py-20 bg-white relative overflow-hidden">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="business-card grid md:grid-cols-2 gap-12 items-center fade-in-up stagger-2">
+                    <div class="business-card__image order-2 md:order-1">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl transform rotate-3 opacity-10"></div>
+                            <img src="assets/images/medical-equipment-resale.jpg" alt="医療機器買取・再販事業" class="relative rounded-2xl shadow-xl hover-scale">
+                        </div>
+                    </div>
+                    <div class="business-card__content order-1 md:order-2">
+                        <div class="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full mb-6">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="font-bold text-sm">BUSINESS 03</span>
+                        </div>
+                        <h2 class="text-4xl font-bold text-gray-800 mb-6">医療機器買取・再販事業</h2>
+                        <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                            使用されなくなった医療機器を適正価格で買取り、厳格な品質チェックとメンテナンスを経て、必要とする医療機関へ再販売。高額な医療機器の有効活用を促進します。
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">専門技術者による徹底的な品質検査</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">新品の30〜50%のコストで高品質機器を提供</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">アフターサポート・メンテナンス保証付き</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 事業4: 医療向けフルフィルメントサービス -->
+        <section class="py-20 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="business-card grid md:grid-cols-2 gap-12 items-center fade-in-up stagger-3">
+                    <div class="business-card__content">
+                        <div class="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full mb-6">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                                <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"/>
+                            </svg>
+                            <span class="font-bold text-sm">BUSINESS 04</span>
+                        </div>
+                        <h2 class="text-4xl font-bold text-gray-800 mb-6">医療向けフルフィルメントサービス</h2>
+                        <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                            医療機関や薬局向けの包括的な物流代行サービス。在庫管理、ピッキング、梱包、配送まで一貫してサポートし、医療現場の業務効率化を実現します。
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">リアルタイム在庫管理システム</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">温度管理・品質管理を徹底した保管環境</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700">配送状況の可視化とトラッキング機能</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business-card__image">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl transform -rotate-3 opacity-10"></div>
+                            <img src="assets/images/medical-fulfillment.jpg" alt="医療向けフルフィルメントサービス" class="relative rounded-2xl shadow-xl hover-scale">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA セクション -->
+        <section class="py-20 bg-gradient-to-br from-peakwell-blue to-cyan-600 relative overflow-hidden">
+            <div class="container mx-auto px-6 text-center relative z-10 fade-in-up">
+                <h2 class="text-4xl font-bold text-white mb-6">事業に関するお問い合わせ</h2>
+                <p class="text-white text-lg mb-8 max-w-2xl mx-auto opacity-90">
+                    各事業の詳細や導入のご相談など、お気軽にお問い合わせください。
+                </p>
+                <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-peakwell-blue font-bold py-4 px-8 rounded-full hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                    <span>お問い合わせはこちら</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div><h4 class="font-bold mb-4">事業内容</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="business.html" class="hover:text-peakwell-blue">事業一覧</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">品質管理</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="quality.html" class="hover:text-peakwell-blue">品質管理への取り組み</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">会社情報</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="company.html" class="hover:text-peakwell-blue">会社概要</a></li><li><a href="message.html" class="hover:text-peakwell-blue">代表者挨拶</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">ニュース</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="news.html" class="hover:text-peakwell-blue">ニュース一覧</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">採用情報</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="recruit.html" class="hover:text-peakwell-blue">採用情報</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">お問い合わせ</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="index.html#contact" class="hover:text-peakwell-blue">お問い合わせフォーム</a></li></ul></div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <a href="index.html" class="flex items-center mb-4 md:mb-0"><img src="assets/images/logo.png" alt="PEAKWELL Logo" class="h-8 mr-3"><span class="text-xl font-bold">株式会社ピークウェル</span></a>
+                <p class="text-gray-400 text-sm">© 2024 PEAKWELL Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="animations.js"></script>
+</body>
+</html>
