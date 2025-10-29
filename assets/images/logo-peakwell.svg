@@ -1,0 +1,36 @@
+<svg width="320" height="120" viewBox="0 0 320 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGradient" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(160 60) rotate(90) scale(72 148)">
+      <stop stop-color="#0F172A" stop-opacity="0" />
+      <stop offset="0.55" stop-color="#0F172A" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#020617" stop-opacity="0.85" />
+    </radialGradient>
+    <linearGradient id="logoGradient" x1="24" y1="16" x2="296" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#52F0FF" />
+      <stop offset="0.5" stop-color="#4AD7FF" />
+      <stop offset="1" stop-color="#2CB0FF" />
+    </linearGradient>
+    <filter id="outerGlow" x="0" y="0" width="320" height="120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="innerGlow" x="0" y="0" width="320" height="120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="8" y="12" width="304" height="96" rx="32" fill="url(#bgGradient)" />
+  <g filter="url(#outerGlow)">
+    <g filter="url(#innerGlow)">
+      <path d="M40 30h48c12.1503 0 22 9.8497 22 22v24l22-22 22 22" stroke="url(#logoGradient)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M40 30v60h66c12.1503 0 22-9.8497 22-22V52" stroke="url(#logoGradient)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="140" y="82" fill="url(#logoGradient)" font-family="'Poppins', 'Noto Sans JP', sans-serif" font-weight="600" font-size="44" letter-spacing="1.2">peakwell</text>
+    </g>
+  </g>
+</svg>

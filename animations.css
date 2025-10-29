@@ -1,0 +1,673 @@
+/* ===================================
+   アニメーション定義
+   医療業界向け: 落ち着いた動き + スタートアップの活気
+   =================================== */
+
+/* ページローダー */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, #f5f7fb 0%, #e8eef7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.page-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.page-loader__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-loader__icon {
+  color: var(--color-primary);
+  animation: pulse 1.5s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--color-primary);
+  animation: pulseRing 1.5s ease-out infinite;
+  opacity: 0;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 背景装飾要素 */
+.bg-decoration {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-decoration__shape {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(30, 77, 216, 0.08) 0%, rgba(30, 77, 216, 0) 70%);
+  filter: blur(40px);
+}
+
+.bg-decoration__shape--1 {
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  right: -100px;
+  animation: float 20s ease-in-out infinite;
+}
+
+.bg-decoration__shape--2 {
+  width: 400px;
+  height: 400px;
+  bottom: 10%;
+  left: -50px;
+  background: radial-gradient(circle, rgba(30, 216, 160, 0.06) 0%, rgba(30, 216, 160, 0) 70%);
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+.bg-decoration__shape--3 {
+  width: 350px;
+  height: 350px;
+  top: 50%;
+  right: 15%;
+  background: radial-gradient(circle, rgba(30, 77, 216, 0.05) 0%, rgba(30, 77, 216, 0) 70%);
+  animation: float 18s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(20px, -20px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-15px, 15px) rotate(-3deg);
+  }
+  75% {
+    transform: translate(15px, 10px) rotate(4deg);
+  }
+}
+
+/* 浮遊アニメーション（控えめ） */
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* アイコンの浮遊（より微細） */
+.icon-float {
+  animation: iconFloat 4s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* 事例カード内のアイコン */
+.work-card__icon {
+  transition: transform 0.4s ease;
+}
+
+.work-card:hover .work-card__icon {
+  transform: scale(1.1) rotate(3deg);
+}
+
+/* スクロールアニメーション基本設定 */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+}
+
+/* フェードアップ */
+.animate-on-scroll[data-animation="fade-up"] {
+  transform: translateY(40px);
+}
+
+.animate-on-scroll[data-animation="fade-up"].is-visible {
+  transform: translateY(0);
+}
+
+/* フェードダウン */
+.animate-on-scroll[data-animation="fade-down"] {
+  transform: translateY(-40px);
+}
+
+.animate-on-scroll[data-animation="fade-down"].is-visible {
+  transform: translateY(0);
+}
+
+/* フェードレフト */
+.animate-on-scroll[data-animation="fade-left"] {
+  transform: translateX(40px);
+}
+
+.animate-on-scroll[data-animation="fade-left"].is-visible {
+  transform: translateX(0);
+}
+
+/* フェードライト */
+.animate-on-scroll[data-animation="fade-right"] {
+  transform: translateX(-40px);
+}
+
+.animate-on-scroll[data-animation="fade-right"].is-visible {
+  transform: translateX(0);
+}
+
+/* サービスカードの強化されたホバーエフェクト */
+.service-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  z-index: -1;
+}
+
+.service-card:hover::before,
+.service-card:focus-within::before {
+  opacity: 0.1;
+}
+
+/* ボタンのパルスエフェクト（CTAボタン用） */
+.btn--primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn--primary:hover::before,
+.btn--primary:focus::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* 事例カードのホバー時の画像アニメーション */
+.work-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.work-card__image {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.work-card:hover .work-card__image {
+  transform: scale(1.05);
+}
+
+.work-card__image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 77, 216, 0.0), rgba(30, 216, 160, 0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.work-card:hover .work-card__image::before {
+  opacity: 1;
+}
+
+/* フォーカス時の輝きエフェクト */
+.contact-form__field input:focus,
+.contact-form__field textarea:focus {
+  animation: focusGlow 2s ease-in-out;
+}
+
+@keyframes focusGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(30, 77, 216, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(30, 77, 216, 0.3);
+  }
+}
+
+/* ヘッダーのスライドインアニメーション */
+.site-header {
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ナビゲーションリンクの波及アニメーション */
+.site-nav__list li {
+  animation: fadeInStagger 0.6s ease-out backwards;
+}
+
+.site-nav__list li:nth-child(1) { animation-delay: 0.1s; }
+.site-nav__list li:nth-child(2) { animation-delay: 0.2s; }
+.site-nav__list li:nth-child(3) { animation-delay: 0.3s; }
+.site-nav__list li:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInStagger {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* モバイルメニューのアニメーション強化 */
+@media (max-width: 800px) {
+  .site-nav__list.is-open li {
+    animation: slideInMenu 0.4s ease-out backwards;
+  }
+
+  .site-nav__list.is-open li:nth-child(1) { animation-delay: 0.05s; }
+  .site-nav__list.is-open li:nth-child(2) { animation-delay: 0.1s; }
+  .site-nav__list.is-open li:nth-child(3) { animation-delay: 0.15s; }
+  .site-nav__list.is-open li:nth-child(4) { animation-delay: 0.2s; }
+
+  @keyframes slideInMenu {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* パフォーマンス最適化: アニメーションの削減設定 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .floating,
+  .icon-float,
+  .bg-decoration__shape {
+    animation: none !important;
+  }
+
+  .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* 医療業界向けの信頼性を示すマイクロインタラクション */
+.service-card__icon,
+.work-card__icon {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+  transition: filter 0.3s ease;
+}
+
+.service-card:hover .service-card__icon,
+.work-card:hover .work-card__icon {
+  filter: drop-shadow(0 8px 16px rgba(30, 77, 216, 0.2));
+}
+
+/* セクション間のスムーズな視覚的流れ */
+section {
+  position: relative;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--color-primary), transparent);
+  transform: translateX(-50%);
+  opacity: 0.2;
+}
+
+section:first-of-type::before {
+  display: none;
+}
+
+/* 事業カードの特別なアニメーション */
+.business-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.business-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.business-card:hover::before {
+  left: 100%;
+}
+
+.business-card__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.business-card__image img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  filter: brightness(1) saturate(1);
+}
+
+.business-card:hover .business-card__image img {
+  transform: scale(1.08);
+  filter: brightness(1.1) saturate(1.2);
+}
+
+.business-card__image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 191, 255, 0) 0%, rgba(0, 191, 255, 0.15) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.business-card:hover .business-card__image::after {
+  opacity: 1;
+}
+
+/* プログレスインジケーター（スクロール進捗） */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  z-index: 9998;
+  transition: width 0.1s ease-out;
+}
+
+/* ======================================
+   MVVセクション専用スタイル
+   ====================================== */
+
+/* MVVカード */
+.mvv-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 191, 255, 0.1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mvv-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.05), transparent);
+  transition: left 0.8s ease;
+}
+
+.mvv-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0, 191, 255, 0.2);
+}
+
+.mvv-card:hover::before {
+  left: 100%;
+}
+
+/* ビジョンカードは逆レイアウト */
+.vision-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+}
+
+.mvv-card__image {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  height: 350px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mvv-card__image img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  filter: brightness(1.05);
+}
+
+.mvv-card:hover .mvv-card__image img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.mvv-card__content {
+  padding: 1rem;
+}
+
+.mvv-card__badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, #00bfff, #009acd);
+  color: white;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+}
+
+.mvv-card__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1f2430;
+  margin-bottom: 1rem;
+}
+
+.mvv-card__description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #5c6478;
+}
+
+/* バリューカード */
+.value-card {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00bfff, #009acd);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 191, 255, 0.2);
+}
+
+.value-card:hover::before {
+  transform: scaleX(1);
+}
+
+.value-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover .value-card__icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.value-card__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2430;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.value-card__description {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #5c6478;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .mvv-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .mvv-card__image {
+    height: 280px;
+  }
+
+  .mvv-card__title {
+    font-size: 1.5rem;
+  }
+
+  .value-card {
+    padding: 1.5rem;
+  }
+}

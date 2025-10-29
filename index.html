@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社ピークウェル | 医療の未来を、物流で支える。</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animations.css" />
+    
+    <!-- Chart.jsライブラリの読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        body { font-family: 'BIZ UDPGothic', sans-serif; color: #333; }
+        h1, h2, h3 { font-weight: 700; }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'peakwell-blue': '#00bfff',
+                        'peakwell-darkblue': '#009acd',
+                        'light-gray': '#f7fafc',
+                        'light-blue': '#f0f9ff',
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- スクロール進捗バー -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- 背景装飾要素 -->
+    <div class="bg-decoration">
+        <div class="bg-decoration__shape bg-decoration__shape--1"></div>
+        <div class="bg-decoration__shape bg-decoration__shape--2"></div>
+        <div class="bg-decoration__shape bg-decoration__shape--3"></div>
+    </div>
+
+    <!-- ページローディングアニメーション -->
+    <div class="page-loader" id="pageLoader">
+        <div class="page-loader__content">
+            <div class="pulse-ring"></div>
+            <svg class="page-loader__icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 5C16.2 5 5 16.2 5 30s11.2 25 25 25 25-11.2 25-25S43.8 5 30 5zm0 45c-11 0-20-9-20-20s9-20 20-20 20 9 20 20-9 20-20 20z" fill="currentColor"/>
+                <path d="M30 15c-1.7 0-3 1.3-3 3v12c0 1.7 1.3 3 3 3s3-1.3 3-3V18c0-1.7-1.3-3-3-3z" fill="currentColor"/>
+                <circle cx="30" cy="40" r="3" fill="currentColor"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center"><img src="assets/images/logo.png" alt="PEAKWELL Logo" class="h-10"></a>
+            <nav class="hidden md:flex space-x-6 items-center text-sm">
+                <a href="business.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">事業内容</a>
+                <a href="quality.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">品質管理</a>
+                <a href="company.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">会社概要</a>
+                <a href="message.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">代表者挨拶</a>
+                <a href="news.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">ニュース</a>
+                <a href="recruit.html" class="text-gray-600 hover:text-peakwell-blue transition duration-300">採用情報</a>
+
+                <a href="index.html#contact" class="bg-peakwell-blue text-white font-bold py-2 px-6 rounded-full hover:bg-peakwell-darkblue transition duration-300">お問い合わせ</a>
+            </nav>
+            <div class="md:hidden"><button class="text-gray-600 focus:outline-none"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="relative bg-gradient-to-br from-blue-50 via-white to-cyan-50 overflow-hidden">
+            <!-- 背景装飾 -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-peakwell-blue opacity-5 rounded-full blur-3xl animate-float"></div>
+                <div class="absolute bottom-0 left-0 w-80 h-80 bg-cyan-400 opacity-5 rounded-full blur-3xl animate-float-delayed"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 py-16 lg:py-24 relative z-10">
+                <!-- 2カラムレイアウト：テキスト + イラスト -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- 左カラム：テキストコンテンツ -->
+                    <div>
+                        <div class="animate-on-scroll" data-animation="fade-right">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6">
+                                医療を、もっと<br>
+                                <span class="text-peakwell-blue">つながる・めぐる・つづく</span>ものに。
+                            </h1>
+                            <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                                私たちは最新のテクノロジーを駆使し、医薬品や医療機器を最もスマートに、そして最も確実にお届けする、新しい医療流通のカタチを創造します。
+                            </p>
+                        </div>
+                        <div class="animate-on-scroll" data-animation="fade-up" data-delay="100">
+                            <a href="business.html" class="inline-flex items-center bg-peakwell-blue text-white font-bold text-lg py-4 px-8 rounded-full hover:bg-peakwell-darkblue transition duration-300 shadow-lg hover:shadow-xl">
+                                事業内容を見る
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 右カラム：イラスト -->
+                    <div class="animate-on-scroll" data-animation="fade-left" data-delay="200">
+                        <img src="assets/images/hero-main.jpg" alt="循環型医療流通のイラスト" class="w-full h-auto hover-lift">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 事業内容セクション -->
+        <section id="business" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 animate-on-scroll" data-animation="fade-up">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-peakwell-blue">OUR BUSINESS</h2>
+                    <p class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">事業内容</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 animate-on-scroll business-card" data-animation="fade-up" data-delay="100">
+                        <div class="business-card__image mb-6">
+                            <img src="assets/images/medicine-buyback.jpg" alt="医薬品買取事業" class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">医薬品買取事業</h3>
+                        <p class="mt-3 text-gray-600">調剤薬局様の不動在庫となっている医薬品を適正価格で買い取り、医療資源の有効活用と経営改善に貢献します。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 animate-on-scroll business-card" data-animation="fade-up" data-delay="200">
+                        <div class="business-card__image mb-6">
+                            <img src="assets/images/otc-sales.jpg" alt="OTC医薬品販売事業" class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">OTC医薬品販売事業</h3>
+                        <p class="mt-3 text-gray-600">一般用医薬品のオンライン販売プラットフォーム。薬剤師による健康相談と迅速な配送サービスを提供します。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 animate-on-scroll business-card" data-animation="fade-up" data-delay="300">
+                        <div class="business-card__image mb-6">
+                            <img src="assets/images/medical-equipment-resale.jpg" alt="医療機器買取・再販事業" class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">医療機器買取・再販事業</h3>
+                        <p class="mt-3 text-gray-600">使用されなくなった医療機器を買取り、品質チェックを経て再販売。高額機器の有効活用を促進します。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 animate-on-scroll business-card" data-animation="fade-up" data-delay="400">
+                        <div class="business-card__image mb-6">
+                            <img src="assets/images/medical-fulfillment.jpg" alt="医療向けフルフィルメントサービス" class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">医療向けフルフィルメントサービス</h3>
+                        <p class="mt-3 text-gray-600">在庫管理から配送まで包括的な物流代行サービス。医療現場の業務効率化を実現します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MVVプレビューセクション -->
+        <section id="mvv" class="py-20 bg-white relative overflow-hidden">
+            <!-- 背景装飾 -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-0 left-0 w-96 h-96 bg-peakwell-blue rounded-full filter blur-3xl"></div>
+                <div class="absolute bottom-0 right-0 w-96 h-96 bg-peakwell-blue rounded-full filter blur-3xl"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-16 animate-on-scroll" data-animation="fade-up">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-peakwell-blue">OUR MVV</h2>
+                    <p class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">ミッション・ビジョン・バリュー</p>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">私たちの信念と、目指す未来。医療流通の革新を通じて、社会に貢献します。</p>
+                </div>
+
+                <!-- Mission -->
+                <div class="mb-16 animate-on-scroll" data-animation="fade-up" data-delay="100">
+                    <div class="mvv-card mission-card">
+                        <div class="mvv-card__image">
+                            <img src="assets/images/mvv-mission.jpg" alt="Mission" class="w-full h-full object-cover">
+                        </div>
+                        <div class="mvv-card__content">
+                            <div class="mvv-card__badge">Mission</div>
+                            <h3 class="mvv-card__title">医療を、もっと<span class="text-peakwell-blue">つながる・めぐる・つづく</span>ものに。</h3>
+                            <p class="mvv-card__description">私たちは、医療資源の循環を通じて、持続可能な医療社会の実現を目指します。テクノロジーと人の温かさで、医療のあり方を変革していきます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vision -->
+                <div class="mb-16 animate-on-scroll" data-animation="fade-up" data-delay="200">
+                    <div class="mvv-card vision-card">
+                        <div class="mvv-card__content">
+                            <div class="mvv-card__badge">Vision</div>
+                            <h3 class="mvv-card__title">「<span class="text-peakwell-blue">循環型医療流通</span>」のインフラになる</h3>
+                            <p class="mvv-card__description">いらなくなった"もの"が、また誰かの"助け"になる。ムダなく循環し、必要な人にちゃんと届く社会をつくる。私たちは、その実現のための基盤を築きます。</p>
+                        </div>
+                        <div class="mvv-card__image">
+                            <img src="assets/images/mvv-vision.jpg" alt="Vision" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Values -->
+                <div class="animate-on-scroll" data-animation="fade-up" data-delay="300">
+                    <div class="text-center mb-10">
+                        <div class="inline-block px-6 py-2 bg-peakwell-blue text-white font-bold rounded-full text-sm tracking-wider mb-4">Values</div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800">私たちが大切にする5つの価値観</h3>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                        <div class="value-card animate-on-scroll" data-animation="fade-up" data-delay="100">
+                            <div class="mb-4">
+                                <img src="assets/images/value-sustainable.jpg" alt="サステナブル・スピリット" class="w-full h-48 object-cover rounded-xl">
+                            </div>
+                            <div class="value-card__icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+                            </div>
+                            <h4 class="value-card__title">サステナブル・スピリット</h4>
+                            <p class="value-card__description">もったいないをなくして、未来の医療につなげる。</p>
+                        </div>
+
+                        <div class="value-card animate-on-scroll" data-animation="fade-up" data-delay="150">
+                            <div class="mb-4">
+                                <img src="assets/images/value-user-first.jpg" alt="ユーザーファースト" class="w-full h-48 object-cover rounded-xl">
+                            </div>
+                            <div class="value-card__icon" style="background: linear-gradient(135deg, #f43f5e, #e11d48);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                            </div>
+                            <h4 class="value-card__title">ユーザーファーストでいこう</h4>
+                            <p class="value-card__description">目の前の現場に本気で向き合い、想像以上のサービスを届ける。</p>
+                        </div>
+
+                        <div class="value-card animate-on-scroll" data-animation="fade-up" data-delay="200">
+                            <div class="mb-4">
+                                <img src="assets/images/value-trust.jpg" alt="誇りと信頼" class="w-full h-48 object-cover rounded-xl">
+                            </div>
+                            <div class="value-card__icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" /></svg>
+                            </div>
+                            <h4 class="value-card__title">誇れるから、すすめられる</h4>
+                            <p class="value-card__description">誇りを持って紹介できる信頼を、積み重ねる。</p>
+                        </div>
+
+                        <div class="value-card animate-on-scroll" data-animation="fade-up" data-delay="250">
+                            <div class="mb-4">
+                                <img src="assets/images/value-compliance.jpg" alt="安全とコンプライアンス" class="w-full h-48 object-cover rounded-xl">
+                            </div>
+                            <div class="value-card__icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                            </div>
+                            <h4 class="value-card__title">Safety & Compliance First</h4>
+                            <p class="value-card__description">患者安全と法令遵守を最優先に。GDP/GSP・薬機法・データ保護を守り、迷ったら止める。</p>
+                        </div>
+
+                        <div class="value-card animate-on-scroll" data-animation="fade-up" data-delay="300">
+                            <div class="mb-4">
+                                <img src="assets/images/value-speed.jpg" alt="スピーディ・フェア・トレーサブル" class="w-full h-48 object-cover rounded-xl">
+                            </div>
+                            <div class="value-card__icon" style="background: linear-gradient(135deg, #00bfff, #009acd);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                            </div>
+                            <h4 class="value-card__title">Fast, Fair & Traceable</h4>
+                            <p class="value-card__description">速く、公正で、追跡できる取引を標準化。SLA・フェアプライス・ロット/温度/期限の完全追跡。</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="company.html#philosophy" class="inline-flex items-center px-8 py-4 bg-peakwell-blue text-white font-bold rounded-full hover:bg-peakwell-darkblue transition duration-300 shadow-lg hover:shadow-xl">
+                        理念を詳しく見る
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 成長推移セクション -->
+        <section id="growth" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left animate-on-scroll" data-animation="fade-right">
+                        <h2 class="text-sm font-bold uppercase tracking-widest text-peakwell-blue">OUR GROWTH</h2>
+                        <p class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">飛躍的なネットワーク拡大</p>
+                        <p class="mt-6 text-gray-700 leading-relaxed">創業以来、私たちのネットワークは急速に拡大しています。テクノロジーと現場の知見を融合させることで、多くの医療機関様から信頼を獲得し、提携施設数も飛躍的に増加。より広く、深く、医療の現場を支え続けています。</p>
+                    </div>
+                    <div class="bg-light-blue p-6 md:p-8 rounded-xl shadow-lg animate-on-scroll" data-animation="fade-left" data-delay="200">
+                        <h3 class="font-bold text-center text-gray-700 mb-4">提携医療機関数 推移</h3>
+                        <div style="height: 300px;">
+                            <canvas id="growthChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせセクション -->
+        <section id="contact" class="bg-white py-20">
+            <div class="container mx-auto px-6 text-center animate-on-scroll" data-animation="fade-up">
+                <h2 class="text-sm font-bold uppercase tracking-widest text-peakwell-blue">CONTACT</h2>
+                <p class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">お問い合わせ</p>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">事業に関するご相談、協業のご提案など、お気軽にお問い合わせください。</p>
+                <div class="mt-10"><a href="mailto:info@peakwell.co.jp" class="bg-peakwell-blue text-white font-bold text-lg py-4 px-10 rounded-full hover:bg-peakwell-darkblue transition duration-300">メールでお問い合わせ</a></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div><h4 class="font-bold mb-4">事業内容</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="business.html" class="hover:text-peakwell-blue">事業一覧</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">品質管理</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="quality.html" class="hover:text-peakwell-blue">品質管理への取り組み</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">会社情報</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="company.html" class="hover:text-peakwell-blue">会社概要</a></li><li><a href="message.html" class="hover:text-peakwell-blue">代表者挨拶</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">ニュース</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="news.html" class="hover:text-peakwell-blue">ニュース一覧</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">採用情報</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="recruit.html" class="hover:text-peakwell-blue">採用情報</a></li></ul></div>
+                <div><h4 class="font-bold mb-4">お問い合わせ</h4><ul class="space-y-2 text-sm text-gray-300"><li><a href="index.html#contact" class="hover:text-peakwell-blue">お問い合わせフォーム</a></li></ul></div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <a href="index.html" class="flex items-center mb-4 md:mb-0"><img src="assets/images/logo.png" alt="PEAKWELL Logo" class="h-8 mr-3"><span class="text-xl font-bold">株式会社ピークウェル</span></a>
+                <p class="text-gray-400 text-sm">© 2024 PEAKWELL Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- グラフ描画用スクリプト -->
+    <script>
+        const ctx = document.getElementById('growthChart').getContext('2d');
+        const peakwellBlue = '#00bfff';
+        const peakwellBlueTransparent = 'rgba(0, 191, 255, 0.2)';
+        
+        const data = {
+            labels: ['2022', '2023', '2024', '2025 (見込)'],
+            datasets: [{
+                label: '提携医療機関数',
+                data: [5000, 7000, 9000, 13000],
+                fill: true,
+                backgroundColor: peakwellBlueTransparent,
+                borderColor: peakwellBlue,
+                pointBackgroundColor: peakwellBlue,
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: peakwellBlue,
+                tension: 0.3,
+                pointRadius: 5,
+                pointHoverRadius: 7,
+                borderWidth: 3,
+                segment: {
+                    borderDash: ctx => (ctx.p1DataIndex === 2 ? [6, 6] : undefined),
+                }
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#e2e8f0' },
+                        ticks: {
+                            callback: function(value) {
+                                if (value >= 1000) {
+                                    return value / 1000 + 'k';
+                                }
+                                return value;
+                            }
+                        }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#333',
+                        titleFont: { weight: 'bold' },
+                        bodyFont: { size: 14 },
+                        padding: 12,
+                        cornerRadius: 4,
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) { label += ': '; }
+                                if (context.parsed.y !== null) {
+                                    label += new Intl.NumberFormat('ja-JP').format(context.parsed.y) + ' 施設';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                animation: { duration: 1500, easing: 'easeInOutCubic' }
+            }
+        };
+
+        new Chart(ctx, config);
+
+        // ページローダー
+        const pageLoader = document.getElementById('pageLoader');
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                pageLoader?.classList.add('is-hidden');
+            }, 800);
+        });
+
+        // スクロールアニメーション
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.getAttribute('data-delay') || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('is-visible');
+                    }, delay);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // スクロール進捗バー
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            if (scrollProgress) {
+                scrollProgress.style.width = scrolled + '%';
+            }
+        });
+
+        // スムーススクロールの強化（イージング付き）
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#' || !href) return;
+                
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const targetPosition = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
