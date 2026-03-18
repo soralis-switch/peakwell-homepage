@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peakwell｜薬局・ドラッグストア検索＆処方箋ネット受付</title>
+  <meta name="description" content="Peakwellは全国の薬局・ドラッグストアを簡単検索。処方箋ネット受付やオンライン服薬指導など、便利なサービスをご利用いただけます。">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== Header ========== -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">&#9769;</span>
+        <span class="logo-text">Peakwell</span>
+      </a>
+      <nav class="header-nav">
+        <a href="#search">薬局検索</a>
+        <a href="#services">サービス</a>
+        <a href="#columns">コラム</a>
+        <a href="#app">アプリ</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="btn btn-outline-sm">ログイン</a>
+        <a href="#" class="btn btn-primary-sm">新規登録</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#search">薬局検索</a>
+    <a href="#services">サービス</a>
+    <a href="#columns">コラム</a>
+    <a href="#app">アプリ</a>
+    <a href="#contact">お問い合わせ</a>
+    <div class="mobile-nav-actions">
+      <a href="#" class="btn btn-outline">ログイン</a>
+      <a href="#" class="btn btn-primary">新規登録</a>
+    </div>
+  </div>
+
+  <!-- ========== Hero ========== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">あなたの街の薬局を、<br>もっと身近に。</h1>
+      <p class="hero-subtitle">全国10万件以上の薬局・ドラッグストアから<br class="sp-only">最適な店舗を検索できます</p>
+      <div class="hero-search" id="search">
+        <div class="search-tabs">
+          <button class="search-tab active" data-tab="area">エリアから探す</button>
+          <button class="search-tab" data-tab="current">現在地から探す</button>
+          <button class="search-tab" data-tab="condition">条件から探す</button>
+        </div>
+        <div class="search-box">
+          <div class="search-inputs" id="searchArea">
+            <select class="search-select">
+              <option value="">都道府県を選択</option>
+              <option>北海道</option><option>東京都</option><option>大阪府</option>
+              <option>愛知県</option><option>福岡県</option><option>神奈川県</option>
+              <option>その他</option>
+            </select>
+            <select class="search-select">
+              <option value="">市区町村を選択</option>
+            </select>
+            <input type="text" class="search-input" placeholder="薬局名・駅名で検索">
+            <button class="btn btn-search">検索する</button>
+          </div>
+          <div class="search-inputs hidden" id="searchCurrent">
+            <button class="btn btn-location">
+              <span class="icon-location">&#9737;</span>
+              現在地から近い薬局を探す
+            </button>
+          </div>
+          <div class="search-inputs hidden" id="searchCondition">
+            <div class="condition-tags">
+              <label class="tag-check"><input type="checkbox"><span>処方箋ネット受付</span></label>
+              <label class="tag-check"><input type="checkbox"><span>オンライン服薬指導</span></label>
+              <label class="tag-check"><input type="checkbox"><span>電子処方箋対応</span></label>
+              <label class="tag-check"><input type="checkbox"><span>駐車場あり</span></label>
+              <label class="tag-check"><input type="checkbox"><span>24時間対応</span></label>
+              <label class="tag-check"><input type="checkbox"><span>在宅医療対応</span></label>
+            </div>
+            <button class="btn btn-search">条件で検索する</button>
+          </div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">100,000</span><span class="stat-label">件以上の登録薬局</span></div>
+        <div class="stat"><span class="stat-num">500,000</span><span class="stat-label">人以上の利用者</span></div>
+        <div class="stat"><span class="stat-num">47</span><span class="stat-label">都道府県対応</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Services ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-title">サービス一覧</h2>
+      <p class="section-subtitle">Peakwellが提供する便利なサービス</p>
+      <div class="service-grid">
+        <a href="#" class="service-card">
+          <div class="service-icon" style="background:#e8f5e9;color:#2e7d32;">&#9854;</div>
+          <h3>処方箋ネット受付</h3>
+          <p>処方箋の写真を送るだけ。待ち時間なくお薬を受け取れます。</p>
+        </a>
+        <a href="#" class="service-card">
+          <div class="service-icon" style="background:#e3f2fd;color:#1565c0;">&#9743;</div>
+          <h3>オンライン服薬指導</h3>
+          <p>自宅にいながら薬剤師からオンラインで服薬指導を受けられます。</p>
+        </a>
+        <a href="#" class="service-card">
+          <div class="service-icon" style="background:#fce4ec;color:#c62828;">&#9829;</div>
+          <h3>お薬手帳アプリ</h3>
+          <p>電子お薬手帳でお薬の情報をスマホでいつでも確認できます。</p>
+        </a>
+        <a href="#" class="service-card">
+          <div class="service-icon" style="background:#fff3e0;color:#e65100;">&#9733;</div>
+          <h3>ジェネリック差額検索</h3>
+          <p>ジェネリック医薬品に切り替えた場合の差額を確認できます。</p>
+        </a>
+        <a href="#" class="service-card">
+          <div class="service-icon" style="background:#f3e5f5;color:#6a1b9a;">&#9878;</div>
+          <h3>漢方提案サービス</h3>
+          <p>気になる症状の設問に答えるだけで最適な漢方をご提案します。</p>
+        </a>
+        <a href="#" class="service-card">
+          <div class="service-icon" style="background:#e0f7fa;color:#00695c;">&#9873;</div>
+          <h3>薬局・店舗情報</h3>
+          <p>営業時間や取扱サービスなど、詳しい店舗情報を掲載しています。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== How it works ========== -->
+  <section class="howto">
+    <div class="container">
+      <h2 class="section-title">処方箋ネット受付の流れ</h2>
+      <p class="section-subtitle">たった3ステップで、待ち時間を大幅に短縮</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-icon">&#128247;</div>
+          <h3>処方箋を撮影</h3>
+          <p>病院でもらった処方箋をスマホで撮影します。</p>
+        </div>
+        <div class="step-arrow">&#10132;</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-icon">&#128241;</div>
+          <h3>薬局に送信</h3>
+          <p>お近くの薬局を選んで、処方箋画像を送信します。</p>
+        </div>
+        <div class="step-arrow">&#10132;</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-icon">&#128138;</div>
+          <h3>お薬を受取り</h3>
+          <p>準備ができたら通知が届くので、薬局でお薬を受け取ります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Features ========== -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Peakwellが選ばれる理由</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-content">
+            <h3>全国最大級の薬局データベース</h3>
+            <p>全国10万件以上の薬局・ドラッグストアの情報を網羅。お住まいの地域はもちろん、外出先でも最寄りの薬局をすぐに見つけることができます。営業時間、取扱サービス、駐車場の有無など詳細な情報を掲載しています。</p>
+          </div>
+          <div class="feature-image feature-img-1"></div>
+        </div>
+        <div class="feature-item reverse">
+          <div class="feature-content">
+            <h3>処方箋ネット受付で待ち時間ゼロ</h3>
+            <p>処方箋の写真を送るだけで、事前に薬の準備を依頼できます。薬局での待ち時間を大幅に短縮。お仕事の合間やお子様連れでも、ストレスなくお薬を受け取れます。</p>
+          </div>
+          <div class="feature-image feature-img-2"></div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-content">
+            <h3>安心のオンライン服薬指導</h3>
+            <p>ご自宅から薬剤師とビデオ通話で服薬指導を受けられます。体調が優れない日や、通院が難しい方にも安心してご利用いただけます。お薬はご自宅に配送も可能です。</p>
+          </div>
+          <div class="feature-image feature-img-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Columns ========== -->
+  <section class="columns" id="columns">
+    <div class="container">
+      <h2 class="section-title">お役立ちコラム</h2>
+      <p class="section-subtitle">健康に関する最新情報をお届け</p>
+      <div class="column-grid">
+        <a href="#" class="column-card">
+          <div class="column-thumb column-thumb-1"></div>
+          <div class="column-body">
+            <span class="column-tag">マイナ保険証</span>
+            <h3>マイナ保険証で薬局受付がもっと便利に</h3>
+            <time>2026.03.15</time>
+          </div>
+        </a>
+        <a href="#" class="column-card">
+          <div class="column-thumb column-thumb-2"></div>
+          <div class="column-body">
+            <span class="column-tag">お薬情報</span>
+            <h3>ジェネリック医薬品で医療費を賢く節約する方法</h3>
+            <time>2026.03.10</time>
+          </div>
+        </a>
+        <a href="#" class="column-card">
+          <div class="column-thumb column-thumb-3"></div>
+          <div class="column-body">
+            <span class="column-tag">健康管理</span>
+            <h3>花粉症シーズン到来！早めの対策と薬の選び方</h3>
+            <time>2026.03.05</time>
+          </div>
+        </a>
+        <a href="#" class="column-card">
+          <div class="column-thumb column-thumb-4"></div>
+          <div class="column-body">
+            <span class="column-tag">オンライン医療</span>
+            <h3>オンライン服薬指導の始め方ガイド</h3>
+            <time>2026.02.28</time>
+          </div>
+        </a>
+      </div>
+      <div class="section-more">
+        <a href="#" class="btn btn-outline">コラム一覧を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== App CTA ========== -->
+  <section class="app-cta" id="app">
+    <div class="container">
+      <div class="app-inner">
+        <div class="app-content">
+          <h2>Peakwellアプリで<br>もっと便利に</h2>
+          <p>処方箋の送信、お薬手帳の管理、薬局検索がアプリひとつで完結。プッシュ通知でお薬の準備完了もすぐにわかります。</p>
+          <div class="app-badges">
+            <a href="#" class="app-badge">
+              <div class="badge-icon">&#9679;</div>
+              <div class="badge-text"><small>Download on the</small><br>App Store</div>
+            </a>
+            <a href="#" class="app-badge">
+              <div class="badge-icon">&#9654;</div>
+              <div class="badge-text"><small>GET IT ON</small><br>Google Play</div>
+            </a>
+          </div>
+        </div>
+        <div class="app-phone">
+          <div class="phone-mockup">
+            <div class="phone-screen">
+              <div class="mock-header">Peakwell</div>
+              <div class="mock-search">&#128269; 薬局を探す</div>
+              <div class="mock-card"></div>
+              <div class="mock-card"></div>
+              <div class="mock-nav">
+                <span>&#9750;</span><span>&#128269;</span><span>&#128196;</span><span>&#9881;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== For Business ========== -->
+  <section class="for-biz">
+    <div class="container">
+      <h2 class="section-title">薬局・企業の方へ</h2>
+      <div class="biz-grid">
+        <a href="#" class="biz-card">
+          <h3>薬局の掲載をご希望の方</h3>
+          <p>Peakwellに店舗情報を掲載して、患者様との接点を増やしませんか？</p>
+          <span class="biz-link">詳しくはこちら &rarr;</span>
+        </a>
+        <a href="#" class="biz-card">
+          <h3>薬剤師の求人を掲載したい方</h3>
+          <p>薬剤師・登録販売者・調剤事務の求人情報を掲載できます。</p>
+          <span class="biz-link">詳しくはこちら &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo logo-footer">
+            <span class="logo-icon">&#9769;</span>
+            <span class="logo-text">Peakwell</span>
+          </a>
+          <p>あなたの街の薬局を、もっと身近に。</p>
+        </div>
+        <div class="footer-links">
+          <h4>サービス</h4>
+          <a href="#">薬局検索</a>
+          <a href="#">処方箋ネット受付</a>
+          <a href="#">オンライン服薬指導</a>
+          <a href="#">お薬手帳アプリ</a>
+          <a href="#">ジェネリック差額検索</a>
+        </div>
+        <div class="footer-links">
+          <h4>サポート</h4>
+          <a href="#">よくある質問</a>
+          <a href="#">お問い合わせ</a>
+          <a href="#">利用規約</a>
+          <a href="#">プライバシーポリシー</a>
+        </div>
+        <div class="footer-links">
+          <h4>企業情報</h4>
+          <a href="#">会社概要</a>
+          <a href="#">採用情報</a>
+          <a href="#">プレスリリース</a>
+          <a href="#">薬局の掲載について</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Peakwell Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
